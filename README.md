@@ -1,21 +1,17 @@
 # Stephen Solka
 
-CTO & cofounder. I build AI agents that do real knowledge work — reading, researching, and writing so people don't have to.
+I build AI models, evaluations, and the systems around them—from specialist retrieval to models that make decisions.
 
-## What I'm building
+## Selected work
 
-### 🔍 [Standd](https://standd.io)
-Autonomous risk intelligence for finance. Standd's agents continuously monitor macro, market, and company signals across private credit & PE portfolios — surfacing risk before it shows up in the financials. Risk hides in plain sight; we find it first.
+- **[DecisionBench](https://github.com/Hanno-Labs/decision-bench)** — Evaluating decision models on practical tasks.
+- **[Bosun](https://huggingface.co/Hanno-Labs/bosun-v3.1-0.6b)** — Compact models for routing, classification, scoring, and abstention.
+- **[Dinghy Law](https://huggingface.co/Hanno-Labs/dinghy-law-8b-v1)** — Specialist embeddings for legal retrieval.
+- **[LangSet](https://github.com/Hanno-Labs/langset)** — Training language models to predict future latent states.
 
-### 📰 [Hey Lefty](https://heylefty.com)
-An AI agent that researches a topic for you — on repeat. It searches the web, writes findings, and refreshes a living briefing on a schedule. Spin one up in seconds.
+## Tools and teaching
 
-Live briefings — no signup:
-- [Global AI Risk & Regulation](https://app.heylefty.com/topics/019e4706-c85e-7739-98c5-110149e6ed77/global-ai-risk-regulation)
-- [Private Credit's Quiet Move into Corporate America](https://app.heylefty.com/topics/019e474a-df40-708a-9d00-2ecd90d18e94/private-credit-s-quiet-move-into-corporate-america)
-- [Vertical AI in Financial Services](https://app.heylefty.com/topics/019e4722-93c8-7c31-b7b9-e4258bc3792a/vertical-ai-in-financial-services)
-- [Browse all briefings →](https://heylefty.com)
+- **[Obsidian Webhooks](https://github.com/trashhalo/obsidian-webhooks-v2)** — A self-hosted Go server and Obsidian plugin that turn webhooks into note updates.
+- **[ML Recipes](https://github.com/trashhalo/ml-recipes)** — Runnable ML tutorials using real datasets.
 
-## Elsewhere
-- 🌐 [standd.io](https://standd.io)
-- 🦦 [heylefty.com](https://heylefty.com)
+[Hugging Face](https://huggingface.co/stephen-solka) · [Writing](https://huggingface.co/stephen-solka/activity/articles) · [LinkedIn](https://www.linkedin.com/in/stephensolka/)
