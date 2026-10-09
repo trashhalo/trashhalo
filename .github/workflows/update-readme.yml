@@ -1,0 +1,48 @@
+name: Update profile README
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 8 * * *'
+      timezone: America/New_York
+  push:
+    branches: [main]
+    paths:
+      - README.template.md
+      - scripts/render-readme.mjs
+      - scripts/render-readme.test.mjs
+      - .github/workflows/update-readme.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - name: Test article selection and rendering
+        run: node --test scripts/render-readme.test.mjs
+      - name: Refresh the latest five articles
+        run: node scripts/render-readme.mjs --template README.template.md --output README.md --author stephen-solka
+      - name: Commit only when the README changes
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "The profile README is already up to date."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh Hugging Face articles'
+          git push origin "HEAD:${TARGET_BRANCH}"
